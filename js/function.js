@@ -156,5 +156,5 @@ form_register.addEventListener("submit", name_event => {
         alert(nombres.value + " " + apellidos.value)
     }
     information.innerText = info;
-
+// console.log();
 })
