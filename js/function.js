@@ -51,9 +51,9 @@ var array_text = ["lunes", "martes","miercoles","jueves","viernes","sabado","dom
 var array_mix = [1,"a",2,"b"];
 var array_mul = [
     {name:"Johan", last_name:"Cardenas",age:"21"},
-    {name:"Johan", last_name:"Cardenas",age:"21"},
-    {name:"Johan", last_name:"Cardenas",age:"21"},
-    {name:"Johan", last_name:"Cardenas",age:"21"}
+    {name:"wilder", last_name:"sanchez",age:"12"},
+    {name:"andrea", last_name:"rodriguez",age:"26"},
+    {name:"david", last_name:"Cardenas",age:"30"}
 ]
 
 // ########## Operadores basicos
@@ -118,6 +118,28 @@ do{
 
 function load_page(){
     // alert("LA PAGINA SE HA CARGADO")
+
+    document.getElementById("nombres").focus();
+    document.getElementById("apellidos").disabled=true;
+    let date = new Date();
+    console.log(date.getMinutes());
+    for(let j=0;j>array_mul.length;j++){
+        console.log(array_mul[j].last_name);
+    }
+}
+
+function validate(){
+
+    let nombres =  document.getElementById("nombres").value;
+    let nombres_2 =  document.getElementById("nombres");
+    if(nombres.length > 2){
+        nombres_2.style.border = "2px solid green"
+        document.getElementById("apellidos").disabled=false;
+        document.getElementById("apellidos").focus();
+        document.getElementById("nombres").value = "";
+        alert(nombres.concat("Duarte"));
+
+    }
 }
 
 function change_Color(){
@@ -158,3 +180,6 @@ form_register.addEventListener("submit", name_event => {
     information.innerText = info;
 // console.log();
 })
+
+
+
